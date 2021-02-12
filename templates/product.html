@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+    <br>
+    <div class="showprd" align="center">
+        <div class="container">
+            <h3>Products</h3>
+            <div class="col-6">
+            <table class="table table-bordered border-dark border-2 rounded-1">
+              <thead class="thead-dark">
+                <tr>
+                    <th>id</th>
+                    <th>product name</th>
+                    <th>Quantity</th>
+                </tr>
+              </thead>
+                <tbody>
+                    {% for prd in products %}
+                    <tr>
+                            <td>{{ prd.id }} </td>
+                           <td><a href="/editprod/{{ prd.prod_name }}">{{ prd.prod_name }}</a></td>
+                            <td>{{ prd.prod_qty }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

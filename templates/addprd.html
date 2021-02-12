@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-8">
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <div class="alert alert-danger" role="alert">
+                        <ul class=flashes>
+                            {% for message in messages %}
+                              <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        </div>
+                  {% endif %}
+                {% endwith %}
+
+        </div>
+    </div>
+    <br>
+    <div class="addprd" align="center">
+
+        <div class="container">
+        <h3>Add Product</h3>
+        <form action="" method="post">
+            <div class="row justify-content-center">
+                <div class="col-2">product name </div>
+               <div class="col-2"><input type="text" name="prd_name" placeholder="Enter product name"></div>
+
+            </div><br>
+            <div class="row justify-content-center">
+                <div class="col-2"> product quantity</div>
+               <div class="col-2"><input type="text" name="prd_qty" placeholder="Enter quantity"></div>
+
+            </div>
+            <br>
+
+            <input class="btn btn-dark" type="submit" value="Submit">
+
+        </form>
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="showprd" align="center">
+        <div class="container">
+        <h3>Report</h3>
+        <div class="col-6">
+
+            <table class="table table-bordered border-dark border-2 rounded-1">
+              <thead class="thead-dark">
+                <tr>
+                    <th>location</th>
+                    <th>product name</th>
+                    <th>Quantity</th>
+                </tr>
+              </thead>
+                <tbody>
+                    {% for key in report %}
+                    <tr>
+                            <td>{{ key.loc }} </td>
+                           <td>{{ key.product_name }}</td>
+                            <td>{{ key.qty }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+{% endblock %}

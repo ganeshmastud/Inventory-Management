@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-8">
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <div class="alert alert-danger" role="alert">
+                        <ul class=flashes>
+                            {% for message in messages %}
+                              <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        </div>
+                  {% endif %}
+                {% endwith %}
+
+        </div>
+    </div>
+    <br>
+
+    <div class="editlocn" align="center">
+         <h3>Edit Location</h3>
+        <br>
+{#        <h3>location id: {{ location.location_id }}: {{ location.Location_name }}</h3>#}
+        <form method="post">
+            <div class="row justify-content-center"><br>
+                <div class="col-4">Location name &nbsp;
+              <input type="text" name="locn_name" placeholder="change location"/></div>
+            </div>
+            <br>
+            <input type="submit" class="btn btn-dark" value="submit" />
+
+        </form>
+    </div>
+{% endblock %}

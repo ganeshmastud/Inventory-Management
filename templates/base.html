@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+      <title>Invetory Management-{{ title }}</title>
+      {% else %}
+      <title>Invetory Management</title>
+      {% endif %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Invertory Management</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/addproduct">addproduct</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="/product">show_products</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" href="/addlocation">add_location</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" href="/showlocations">show_locations</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" href="/addproductmvmt">add_prod_movement</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" href="/showprodmvmt">show_prod_mvmt</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" href="/report">report</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{#<a href="/addproduct">add_product</a> &nbsp;#}
+{#<a href="/product">show_products</a> &nbsp;#}
+{#<a href="/addlocation">add_location</a> &nbsp;#}
+{#<a href="/showlocations">show_location</a> &nbsp;#}
+{#<a href="/addproductmvmt">add_prod_movement</a> &nbsp;#}
+{#<a href="/showprodmvmt">show_prod_mvmt</a> &nbsp;#}
+{#<a href="/report">report</a>#}
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
